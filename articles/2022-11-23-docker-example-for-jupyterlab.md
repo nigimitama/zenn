@@ -30,9 +30,9 @@ FROM python:3
 WORKDIR /workdir
 
 # cmakeが必要なライブラリを入れる場合
-# RUN apt update && apt install vim cmake -y
+# RUN apt update && apt install cmake -y
 
-# ライブラリの追加
+# ライブラリのインストール
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install jupyterlab
 COPY requirements.txt .
