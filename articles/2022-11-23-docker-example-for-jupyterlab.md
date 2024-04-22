@@ -39,12 +39,11 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 ```
 
-## docker-compose.yml
+## compose.yml
 
 コンテナとホストPCでストレージを共有したい状況を想定しており、volumesでbindを設定している
 
-```yml:docker-compose.yml
-version: '3'
+```yml:compose.yml
 services:
   python:
     build: .
